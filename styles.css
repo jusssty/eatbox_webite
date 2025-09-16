@@ -98,14 +98,18 @@ footer a:hover {
 }
 
 .auth main {
-  margin: 300px;
+  color: #ff6e7d;
+  margin-left: 350px;
+  margin-top: 250px;
   border: 2px solid #ff3c3c;
   background-color: #000;
   border-radius: 10px;
   max-width: 800px;
+  text-align: center;
 }
 
 .form {
+  color: #ff6e7d;
   margin-left: 550px;
   background: rgba(0,0,0,0.7);
   padding: 30px;
