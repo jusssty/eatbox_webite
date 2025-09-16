@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang=ru>
+<head>
+	<title>feedback</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<a href="index.html"><h1>Eatbox</h1></a>
+		<h2>Обратная связь</h2>
+	</header>
+	<main class="form">
+    <h2>Форма обратной связи</h2>
+    <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data" class="form-box">
+      <label>ФИО: <input type="text" name="fio" required></label><br>
+      <label>Email: <input type="email" name="email" required></label>
+      <fieldset>
+        <legend>Откуда узнали о нас:</legend>
+        <label><input type="radio" name="source" value="друзья"> Друзья</label>
+        <label><input type="radio" name="source" value="реклама"> Реклама</label>
+        <label><input type="radio" name="source" value="интернет"> Интернет</label>
+      </fieldset>
+      <label>Тип обращения:
+        <select name="type">
+          <option value="жалоба">Жалоба</option>
+          <option value="предложение">Предложение</option>
+        </select>
+      </label><br>
+      <label>Текст сообщения:
+        <textarea name="message" rows="1" required></textarea>
+      </label>
+      <label class="in_files">Вложения:
+        <input type="file" name="file">
+      </label><br>
+      <label class="checkbox">
+        <input type="checkbox" name="consent" required>
+        Даю согласие на обработку персональных данных
+      </label><br>
+      <button type="submit">Отправить</button>
+    </form>
+	</main>
+</body>
+</html>
