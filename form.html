@@ -13,7 +13,7 @@
 	</header>
 	<main class="form">
     <h2>Форма обратной связи</h2>
-    <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data" class="form-box">
+    <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
       <label>ФИО: <input type="text" name="fio" required></label><br>
       <label>Email: <input type="email" name="email" required></label>
       <fieldset>
@@ -31,10 +31,10 @@
       <label>Текст сообщения:
         <textarea name="message" rows="1" required></textarea>
       </label>
-      <label class="in_files">Вложения:
+      <label>Вложения:
         <input type="file" name="file">
       </label><br>
-      <label class="checkbox">
+      <label>
         <input type="checkbox" name="consent" required>
         Даю согласие на обработку персональных данных
       </label><br>
