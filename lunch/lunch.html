@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eatbox — Собрать ланч</title>
+  <link rel="stylesheet" href="../main/styles.css">
+  <link rel="stylesheet" href="lunch.css">
+  <link rel="stylesheet" href="../print.css" media="print">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <a href="../main/index.html"><h1>Eatbox</h1></a>
+  </header>
+  <main>
+    <section class="menu-section">
+      <h2>Блюда</h2>
+      <div class="menu-grid">
+        <div class="dish">
+          <img src="burger.jpg" alt="Big Boom Burger">
+          <p class="dish-name">Big Boom Burger</p>
+          <p class="dish-weight">350 гр.</p>
+          <p class="dish-price">350 руб.</p>
+          <button>Добавить</button>
+        </div>
+        <div class="dish">
+          <img src="fries.jpg" alt="Kick Fries">
+          <p class="dish-name">Kick Fries</p>
+          <p class="dish-weight">280 гр.</p>
+          <p class="dish-price">280 руб.</p>
+          <button>Добавить</button>
+        </div>
+        <div class="dish">
+          <img src="chicken.jpg" alt="Snare Chicken">
+          <p class="dish-name">Snare Chicken</p>
+          <p class="dish-weight">490 гр.</p>
+          <p class="dish-price">490 руб.</p>
+          <button>Добавить</button>
+        </div>
+        <div class="dish">
+          <img src="sticks.jpg" alt="Scratch Sticks">
+          <p class="dish-name">Scratch Sticks</p>
+          <p class="dish-weight">320 гр.</p>
+          <p class="dish-price">320 руб.</p>
+          <button>Добавить</button>
+        </div>
+        <div class="dish">
+          <img src="donut.jpg" alt="Drop Donut">
+          <p class="dish-name">Drop Donut</p>
+          <p class="dish-weight">250 гр.</p>
+          <p class="dish-price">250 руб.</p>
+          <button>Добавить</button>
+        </div>
+    </section>
+    <section id="order">
+      <h2>Сделать заказ</h2>
+      <div class="order-block">
+        <form action="https://httpbin.org/post" method="post">
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="phone">Телефон:</label>
+          <input type="tel" id="phone" name="phone" required>
+          <label for="phone">Адрес:</label>
+          <input type="text" id="address" name="address" required>
+          <fieldset class="delivery">
+            <label>
+              <input type="radio" name="delivery-option" value="asap" checked>
+              Как можно скорее
+            </label>
+            <label>
+              <input type="radio" name="delivery-option" value="specific">
+              К указанному времени
+            </label>
+            <div class="datetime-input">
+              <label for="delivery-date">Выберите дату:</label>
+              <input type="date" id="delivery-date" name="delivery-date" min="<?= date('Y-m-d') ?>">
+              <label for="delivery-time">Выберите время:</label>
+              <input type="time" id="delivery-time" name="delivery-time" min="07:00" max="23:00">
+              <small>Доступное время доставки с 07:00 до 23:00</small>
+            </div>
+            <div class="time-input">
+              <label>
+                Укажите время доставки:
+                <input type="time" name="delivery-time" min="07:00" max="23:00">
+              </label>
+              <small>Доступное время доставки с 7:00 до 23:00</small>
+            </div>
+          </fieldset>
+          <button type="submit">Заказать</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Контакты: г. Москва, ул. Пушкина, дом Колотушкина</p>
+    <p>Телефон: <a href="tel:+79054658968">+7 (905) 465-89-68</a></p>
+    <p>Email: <a href="mailto:info@eatbox.ru">info@eatbox.ru</a></p>
+  </footer>
+</body>
+</html>

@@ -92,31 +92,36 @@ footer a:hover {
   color: #fff;
 }
 
-.auth {
-  height: 100vh;
-  background: url('background.jpg') no-repeat center center/cover;
-}
+@media (max-width: 600px) {
+  body {
+    font-size: 0.95rem;
+  }
 
-.auth main {
-  color: #ff6e7d;
-  margin-left: 350px;
-  margin-top: 250px;
-  border: 2px solid #ff3c3c;
-  background-color: #000;
-  border-radius: 10px;
-  max-width: 800px;
-  text-align: center;
-}
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
 
-.form {
-  color: #ff6e7d;
-  margin-left: 550px;
-  background: rgba(0,0,0,0.7);
-  padding: 30px;
-  border-radius: 15px;
-  width: 300px;
-}
+  header h1 {
+    font-size: 1.8rem;
+  }
 
-.form h2 {
-  text-align: center;
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .beatbox_img {
+    width: 200px;
+    height: 150px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 20px 10px;
+  }
 }

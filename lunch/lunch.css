@@ -1,0 +1,177 @@
+.menu-section {
+  margin-bottom: 50px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.dish {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  color: #111;
+  border-radius: 35px;
+  padding: 30px 40px;
+  filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dish:hover {
+  border: 2px solid tomato;
+}
+
+.dish:hover button {
+  background: tomato;
+  color: #fff;
+}
+
+.dish img {
+  width: 100%;
+  border-radius: 35px;
+}
+
+.dish-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.dish-price {
+  font-size: 1.1rem;
+}
+
+.dish-weight {
+  color: gray;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 30px;
+  background: #f1eee9;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav a.active {
+  color: tomato;
+}
+
+#order {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+
+#order h2 {
+  text-align: center;
+  color: #ff3c3c;
+  margin-bottom: 30px;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.order-block form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.order-block label {
+  font-weight: bold;
+  color: #eee;
+}
+
+.order-block input {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.order-block input:focus {
+  background: #222;
+  box-shadow: 0 0 10px #ff3c3c;
+}
+
+.order-block button {
+  padding: 12px 0;
+  background: #ff3c3c;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.order-block button:hover {
+  background: #fff;
+  color: #ff3c3c;
+  box-shadow: 0 0 10px #ff3c3c;
+}
+
+.delivery .time-input {
+  margin-top: 10px;
+}
+
+.delivery fieldset {
+  border: 1px solid rgba(255, 60, 60, 0.4);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  color: #eee;
+}
+
+.delivery label {
+  display: block;
+  margin-top: 8px;
+}
+
+
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    justify-content: center;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}

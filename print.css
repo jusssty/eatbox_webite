@@ -1,0 +1,19 @@
+header, nav, button {
+  display: none;
+}
+
+body {
+  background: #fff;
+  color: #000;
+}
+
+.dish {
+  border: 1px solid #ccc;
+  filter: none;
+  box-shadow: none;
+}
+
+footer {
+  border-top: 1px solid #000;
+  text-align: center;
+}
