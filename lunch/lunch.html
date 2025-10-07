@@ -15,7 +15,33 @@
   </header>
   <main>
     <section class="menu-section">
-      <h2>Блюда</h2>
+      <h2>Супы</h2>
+      <div class="menu-grid">
+        <div class="dish">
+          <img src="tom.jpg" alt="Tom Yam and Jerry">
+          <p class="dish-name">Tom Yam and Jerry</p>
+          <p class="dish-weight">250 мл</p>
+          <p class="dish-price">350 руб.</p>
+          <button>Добавить</button>
+        </div>
+        <div class="dish">
+          <img src="soup.jpg" alt="EDM chicken soup">
+          <p class="dish-name">EDM chicken soup</p>
+          <p class="dish-weight">300 мл</p>
+          <p class="dish-price">250 руб.</p>
+          <button>Добавить</button>
+        </div>
+        <div class="dish">
+          <img src="borsh.jpg" alt="B-b-borsh">
+          <p class="dish-name">B-b-borsh</p>
+          <p class="dish-weight">300 мл</p>
+          <p class="dish-price">290 руб.</p>
+          <button>Добавить</button>
+        </div>
+      </div>
+    </section>
+    <section class="menu-section">
+      <h2>Основные блюда</h2>
       <div class="menu-grid">
         <div class="dish">
           <img src="burger.jpg" alt="Big Boom Burger">
@@ -48,13 +74,67 @@
         <div class="dish">
           <img src="donut.jpg" alt="Drop Donut">
           <p class="dish-name">Drop Donut</p>
-          <p class="dish-weight">250 гр.</p>
+          <p class="dish-weight">1 шт.</p>
           <p class="dish-price">250 руб.</p>
           <button>Добавить</button>
         </div>
     </section>
+    <section class="menu-section">
+      <h2>Напитки</h2>
+      <div class="menu-grid">
+        <div class="dish">
+          <img src="lemonade.jpg" alt="Лимонад">
+          <p class="dish-name">Лимонад</p>
+          <p class="dish-weight">300 мл</p>
+          <p class="dish-price">150 руб.</p>
+          <button>Добавить</button>
+        </div>
+        <div class="dish">
+          <img src="coffee.jpg" alt="Кофе">
+          <p class="dish-name">Капучино</p>
+          <p class="dish-weight">250 мл</p>
+          <p class="dish-price">180 руб.</p>
+          <button>Добавить</button>
+        </div>
+        <div class="dish">
+          <img src="tea.jpg" alt="Чай">
+          <p class="dish-name">Чай</p>
+          <p class="dish-weight">250 мл</p>
+          <p class="dish-price">130 руб.</p>
+          <button>Добавить</button>
+        </div>
+      </div>
+    </section>
     <section id="order">
       <h2>Сделать заказ</h2>
+      <h2>Ваш заказ</h2>
+      <form id="order-form">
+        <label for="soup">Суп:</label>
+        <select id="soup" name="soup" required>
+          <option value="">-- Выберите суп --</option>
+          <option value="tom">Tom Yam and Jerry</option>
+          <option value="borch">B-b-borsh</option>
+          <option value="EDM chicken soup">EDM chicken soup</option>
+        </select>
+        <label for="main">Главное блюдо:</label>
+        <select id="main" name="main" required>
+          <option value="">-- Выберите главное блюдо --</option>
+          <option value="big_boom_burger">Big Boom Burger</option>
+          <option value="kick_fries">Kick Fries</option>
+          <option value="snare_chicken">Snare Chicken</option>
+          <option value="scratch_sticks">Scratch Sticks</option>
+          <option value="drop_donut">Drop Donut</option>
+        </select>
+        <label for="drink">Напиток:</label>
+        <select id="drink" name="drink" required>
+          <option value="">-- Выберите напиток --</option>
+          <option value="scratch_sticks">Scratch Sticks</option>
+          <option value="cola">Cola</option>
+          <option value="juice">Сок</option>
+        </select>
+        <label for="comments">Комментарии к заказу:</label>
+        <textarea id="comments" name="comments" rows="3" placeholder="Например, без лука или меньше соли"></textarea>
+      </form>
       <div class="order-block">
         <form action="https://httpbin.org/post" method="post">
           <label for="name">Имя:</label>

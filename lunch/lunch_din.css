@@ -2,6 +2,15 @@
   margin-bottom: 50px;
 }
 
+.menu-section h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ff3c3c;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -9,7 +18,8 @@
 }
 
 .dish {
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
   background: #fff;
   color: #111;
   border-radius: 35px;
@@ -31,23 +41,26 @@
 .dish img {
   width: 100%;
   border-radius: 35px;
+  margin-bottom: 15px;
 }
 
 .dish-name {
   font-size: 1.2rem;
   font-weight: bold;
-}
-
-.dish-price {
-  font-size: 1.1rem;
+  margin-bottom: 5px;
 }
 
 .dish-weight {
   color: gray;
+  margin-bottom: 5px;
 }
 
-button {
-  margin-top: 10px;
+.dish-price {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.dish button {
   padding: 10px 30px;
   background: #f1eee9;
   border: none;
@@ -56,18 +69,21 @@ button {
   transition: 0.3s;
 }
 
-h1 {
-  font-family: 'Roboto', sans-serif;
+#order {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+  background-color: #1a1a1a;
+  border-radius: 20px;
 }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-nav a.active {
-  color: tomato;
+#order h2 {
+  text-align: center;
+  color: #ff3c3c;
+  margin-bottom: 30px;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 #order-form {
@@ -78,7 +94,7 @@ nav a.active {
   padding: 20px;
   border-radius: 15px;
   max-width: 400px;
-  margin-top: 20px;
+  margin: auto;
 }
 
 #order-form label {
@@ -112,28 +128,11 @@ nav a.active {
   color: #ff3c3c;
 }
 
-#order {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
-  background-color: #1a1a1a;
-  border-radius: 20px;
-  margin-top: 40px;
-}
-
-#order h2 {
-  text-align: center;
-  color: #ff3c3c;
-  margin-bottom: 30px;
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
 .order-block form {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-top: 20px;
 }
 
 .order-block label {
@@ -163,10 +162,6 @@ nav a.active {
   box-shadow: 0 0 10px #ff3c3c;
 }
 
-.delivery .time-input {
-  margin-top: 10px;
-}
-
 .delivery fieldset {
   border: 1px solid rgba(255, 60, 60, 0.4);
   border-radius: 10px;
@@ -180,27 +175,22 @@ nav a.active {
   margin-top: 8px;
 }
 
+.delivery .time-input {
+  margin-top: 10px;
+}
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
   .menu-grid {
     grid-template-columns: 1fr;
   }
 
-  header {
-    flex-direction: column;
+  #order-form, .order-block form {
+    width: 100%;
   }
-
-  nav {
-    justify-content: center;
-  }
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1;
 }
