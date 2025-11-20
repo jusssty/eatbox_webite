@@ -1,34 +1,34 @@
 const dishes = [
-  { keyword: "borsh", name: "B-b-borsh", price: 290, category: "soup", count: "300 мл", image: "borsh.jpg", kind: "meat" },
-  { keyword: "edm_chicken_soup", name: "EDM Chicken Soup", price: 250, category: "soup", count: "300 мл", image: "soup.jpg", kind: "meat" },
-  { keyword: "tom_yam", name: "Tom Yam and Jerry", price: 350, category: "soup", count: "250 мл", image: "tom.jpg", kind: "fish" },
-  { keyword: "bass_gazpacho", name: "Bass Gazpacho", price: 270, category: "soup", count: "300 мл", image: "gazpacho.jpg", kind: "veg" },
-  { keyword: "drum_soup", name: "Drum Fish Soup", price: 330, category: "soup", count: "300 мл", image: "drum_soup.jpg", kind: "fish" },
-  { keyword: "beat_veggie", name: "Beat Veggie Soup", price: 240, category: "soup", count: "300 мл", image: "veggie.jpg", kind: "veg" },
-  { keyword: "boom_burger", name: "Big Boom Burger", price: 350, category: "main", count: "350 г", image: "burger.jpg", kind: "meat" },
-  { keyword: "kick_fries", name: "Kick Fries", price: 280, category: "main", count: "280 г", image: "fries.jpg", kind: "veg" },
-  { keyword: "snare_chicken", name: "Snare Chicken", price: 490, category: "main", count: "490 г", image: "chicken.jpg", kind: "meat" },
-  { keyword: "scratch_sticks", name: "Scratch Sticks", price: 320, category: "main", count: "320 г", image: "sticks.jpg", kind: "veg" },
-  { keyword: "bass_salmon", name: "Bass Salmon", price: 480, category: "main", count: "350 г", image: "salmon.jpg", kind: "fish" },
-  { keyword: "vegan_groove", name: "Vegan Groove Bowl", price: 300, category: "main", count: "300 г", image: "bowl.jpg", kind: "veg" },
-  { keyword: "drop_caesar", name: "Drop Caesar", price: 290, category: "salad", count: "200 г", image: "caesar.jpg", kind: "meat" },
-  { keyword: "beat_caprese", name: "Beat Caprese", price: 260, category: "salad", count: "200 г", image: "caprese.jpg", kind: "veg" },
-  { keyword: "snare_sea", name: "Snare Seafood", price: 340, category: "salad", count: "200 г", image: "seafood.jpg", kind: "fish" },
-  { keyword: "green_rhythm", name: "Green Rhythm", price: 240, category: "salad", count: "200 г", image: "green.jpg", kind: "veg" },
-  { keyword: "hummus_drop", name: "Hummus Drop", price: 270, category: "salad", count: "180 г", image: "hummus.jpg", kind: "veg" },
-  { keyword: "fresh_vibe", name: "Fresh Vibe", price: 230, category: "salad", count: "200 г", image: "fresh.jpg", kind: "veg" },
-  { keyword: "lemonade_mix", name: "Lemonade Mix", price: 150, category: "drink", count: "300 мл", image: "lemonade.jpg", kind: "cold" },
-  { keyword: "drop_cola", name: "Drop Cola", price: 130, category: "drink", count: "330 мл", image: "cola.jpg", kind: "cold" },
-  { keyword: "juice_wave", name: "Juice Wave", price: 140, category: "drink", count: "250 мл", image: "juice.jpg", kind: "cold" },
-  { keyword: "coffee_groove", name: "Coffee Groove", price: 180, category: "drink", count: "250 мл", image: "coffee.jpg", kind: "hot" },
-  { keyword: "tea_scratch", name: "Tea Scratch", price: 130, category: "drink", count: "250 мл", image: "tea.jpg", kind: "hot" },
-  { keyword: "cocoa_drop", name: "Cocoa Drop", price: 160, category: "drink", count: "250 мл", image: "cocoa.jpg", kind: "hot" },
-  { keyword: "donut_drop", name: "Drop Donut", price: 250, category: "dessert", count: "1 шт.", image: "donut.jpg", kind: "small" },
-  { keyword: "beat_cupcake", name: "Beat Cupcake", price: 150, category: "dessert", count: "1 шт.", image: "cupcake.jpg", kind: "small" },
-  { keyword: "snare_cheesecake", name: "Snare Cheesecake", price: 270, category: "dessert", count: "150 г", image: "cheesecake.jpg", kind: "medium" },
-  { keyword: "bass_tiramisu", name: "Bass Tiramisu", price: 260, category: "dessert", count: "150 г", image: "tiramisu.jpg", kind: "medium" },
-  { keyword: "boom_cake", name: "Boom Cake", price: 400, category: "dessert", count: "250 г", image: "cake.jpg", kind: "large" },
-  { keyword: "muffin_kick", name: "Muffin Kick", price: 140, category: "dessert", count: "1 шт.", image: "muffin.jpg", kind: "small" }
+  { keyword: "borsh", name: "B-b-borsh", price: 290, category: "soup", count: "300 мл", image: "img/borsh.jpg", kind: "meat" },
+  { keyword: "edm_chicken_soup", name: "EDM Chicken Soup", price: 250, category: "soup", count: "300 мл", image: "img/soup.jpg", kind: "meat" },
+  { keyword: "tom_yam", name: "Tom Yam and Jerry", price: 350, category: "soup", count: "250 мл", image: "img/tom.jpg", kind: "fish" },
+  { keyword: "bass_gazpacho", name: "Bass Gazpacho", price: 270, category: "soup", count: "300 мл", image: "img/gazpacho.jpg", kind: "veg" },
+  { keyword: "drum_soup", name: "Drum Fish Soup", price: 330, category: "soup", count: "300 мл", image: "img/drum_soup.jpg", kind: "fish" },
+  { keyword: "beat_veggie", name: "Beat Veggie Soup", price: 240, category: "soup", count: "300 мл", image: "img/veggie.jpg", kind: "veg" },
+  { keyword: "boom_burger", name: "Big Boom Burger", price: 350, category: "main", count: "350 г", image: "img/burger.jpg", kind: "meat" },
+  { keyword: "kick_fries", name: "Kick Fries", price: 280, category: "main", count: "280 г", image: "img/fries.jpg", kind: "veg" },
+  { keyword: "snare_chicken", name: "Snare Chicken", price: 490, category: "main", count: "490 г", image: "img/chicken.jpg", kind: "meat" },
+  { keyword: "scratch_sticks", name: "Scratch Sticks", price: 320, category: "main", count: "320 г", image: "img/sticks.jpg", kind: "veg" },
+  { keyword: "bass_salmon", name: "Bass Salmon", price: 480, category: "main", count: "350 г", image: "img/salmon.jpg", kind: "fish" },
+  { keyword: "vegan_groove", name: "Vegan Groove Bowl", price: 300, category: "main", count: "300 г", image: "img/bowl.jpg", kind: "veg" },
+  { keyword: "drop_caesar", name: "Drop Caesar", price: 290, category: "salad", count: "200 г", image: "img/caesar.jpg", kind: "meat" },
+  { keyword: "beat_caprese", name: "Beat Caprese", price: 260, category: "salad", count: "200 г", image: "img/caprese.jpg", kind: "veg" },
+  { keyword: "snare_sea", name: "Snare Seafood", price: 340, category: "salad", count: "200 г", image: "img/seafood.jpg", kind: "fish" },
+  { keyword: "green_rhythm", name: "Green Rhythm", price: 240, category: "salad", count: "200 г", image: "img/green.jpg", kind: "veg" },
+  { keyword: "hummus_drop", name: "Hummus Drop", price: 270, category: "salad", count: "180 г", image: "img/hummus.jpg", kind: "veg" },
+  { keyword: "fresh_vibe", name: "Fresh Vibe", price: 230, category: "salad", count: "200 г", image: "img/fresh.jpg", kind: "veg" },
+  { keyword: "lemonade_mix", name: "Lemonade Mix", price: 150, category: "drink", count: "300 мл", image: "img/lemonade.jpg", kind: "cold" },
+  { keyword: "drop_cola", name: "Drop Cola", price: 130, category: "drink", count: "330 мл", image: "img/cola.jpg", kind: "cold" },
+  { keyword: "juice_wave", name: "Juice Wave", price: 140, category: "drink", count: "250 мл", image: "img/juice.jpg", kind: "cold" },
+  { keyword: "coffee_groove", name: "Coffee Groove", price: 180, category: "drink", count: "250 мл", image: "img/coffee.jpg", kind: "hot" },
+  { keyword: "tea_scratch", name: "Tea Scratch", price: 130, category: "drink", count: "250 мл", image: "img/tea.jpg", kind: "hot" },
+  { keyword: "cocoa_drop", name: "Cocoa Drop", price: 160, category: "drink", count: "250 мл", image: "img/cocoa.jpg", kind: "hot" },
+  { keyword: "donut_drop", name: "Drop Donut", price: 250, category: "dessert", count: "1 шт.", image: "img/donut.jpg", kind: "small" },
+  { keyword: "beat_cupcake", name: "Beat Cupcake", price: 150, category: "dessert", count: "1 шт.", image: "img/cupcake.jpg", kind: "small" },
+  { keyword: "snare_cheesecake", name: "Snare Cheesecake", price: 270, category: "dessert", count: "150 г", image: "img/cheesecake.jpg", kind: "medium" },
+  { keyword: "bass_tiramisu", name: "Bass Tiramisu", price: 260, category: "dessert", count: "150 г", image: "img/tiramisu.jpg", kind: "medium" },
+  { keyword: "boom_cake", name: "Boom Cake", price: 400, category: "dessert", count: "250 г", image: "img/cake.jpg", kind: "large" },
+  { keyword: "muffin_kick", name: "Muffin Kick", price: 140, category: "dessert", count: "1 шт.", image: "img/muffin.jpg", kind: "small" }
 ];
 
 dishes.sort((a, b) => a.name.localeCompare(b.name));
@@ -153,3 +153,61 @@ function setupFilters() {
     }
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  
+  const form = document.querySelector("form");
+  const alertOverlay = document.getElementById("alert-overlay");
+  const alertMessage = document.getElementById("alert-message");
+  const alertOk = document.getElementById("alert-ok");
+
+  alertOk.addEventListener("click", () => {
+    alertOverlay.classList.add("hidden");
+  });
+
+  form.addEventListener("submit", (e) => {
+    const soup = document.querySelector(".order-soup span").textContent !== "Блюдо не выбрано";
+    const main = document.querySelector(".order-main span").textContent !== "Блюдо не выбрано";
+    const salad = document.querySelector(".order-salad span").textContent !== "Блюдо не выбрано";
+    const drink = document.querySelector(".order-drink span").textContent !== "Блюдо не выбрано";
+    const dessert = document.querySelector(".order-dessert span").textContent !== "Блюдо не выбрано";
+
+    const combos = [
+      { soup: true, main: true, salad: true, drink: true },
+      { soup: true, main: true, drink: true },
+      { soup: true, salad: true, drink: true },
+      { main: true, salad: true, drink: true },
+      { main: true, drink: true },
+      { dessert: true }         
+    ];
+
+    let valid = combos.some(combo =>
+      (!combo.soup || soup) &&
+      (!combo.main || main) &&
+      (!combo.salad || salad) &&
+      (!combo.drink || drink) &&
+      (!combo.dessert || dessert)
+    );
+
+    if (!valid) {
+      e.preventDefault();
+
+      let message = "";
+
+      if (!soup && !main && !salad && !drink && !dessert) {
+        message = "Ничего не выбрано";
+      } else if (!drink) {
+        message = "Выберите напиток";
+      } else if (!main && !salad) {
+        message = "Выберите главное блюдо/салат/стартер";
+      } else if (!soup && !main) {
+        message = "Выберите суп или главное блюдо";
+      } else if (!main) {
+        message = "Выберите главное блюдо";
+      }
+
+      alertMessage.textContent = message;
+      alertOverlay.classList.remove("hidden");
+    }
+  });
+});
