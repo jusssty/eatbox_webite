@@ -349,3 +349,44 @@ main {
   font-size: 0.95rem;
   text-align: center;
 }
+
+#checkout-panel {
+  background: #fffbf8;
+  border-radius: 12px;
+  padding: 12px 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+#checkout-panel .checkout-inner { 
+  display:flex; 
+  justify-content:space-between;
+  align-items:center;
+  color: #000;
+}
+
+#checkout-panel a { 
+  padding:8px 14px; 
+  background: #ff3c3c; 
+  color: #fff; 
+  border-radius:8px; 
+  text-decoration:none; 
+}
+
+#checkout-panel a.disabled, #to-checkout-link.disabled { 
+  background:#ccc; 
+  pointer-events:none; 
+}
+
+#to-checkout-link { 
+  display:inline-block; 
+  padding:8px 12px;
+  border-radius:8px; 
+  text-decoration:none; 
+  color:#fff; 
+  background:#ff3c3c; 
+}
+
+#to-checkout-link.disabled { 
+  background:#666; 
+  pointer-events:none; 
+}

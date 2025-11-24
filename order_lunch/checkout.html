@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eatbox — Оформить заказ</title>
+  <link rel="stylesheet" href="../main/styles.css">
+  <link rel="stylesheet" href="../lunch/lunch.css">
+</head>
+<body>
+  <header>
+    <a href="../index.html"><h1>Eatbox</h1></a>
+  </header>
+
+  <main>
+    <section id="basket" class="menu-section">
+      <h2>Состав заказа</h2>
+      <div class="menu-grid" id="basket-grid">
+        <!-- сюда подгружаются карточки выбранных блюд -->
+      </div>
+      <p id="empty-message" style="grid-column:1/-1; color:#ccc; display:none;">
+        Ничего не выбрано. Чтобы добавить блюда в заказ, перейдите на страницу
+        <a href="../lunch/lunch_din.html">Собрать ланч</a>.
+      </p>
+    </section>
+
+    <section id="checkout" class="menu-section">
+      <h2>Оформление заказа</h2>
+      <div id="checkout-wrap" style="display:flex; gap:30px; flex-wrap:wrap;">
+        <div id="checkout-left" style="flex:1; min-width:280px; max-width:420px;">
+          <div id="order-summary" class="order-block" style="padding:20px;">
+            <h3>Ваши блюда</h3>
+            <div id="summary-list">
+            </div>
+            <p class="order-total">Итоговая стоимость: 0 руб.</p>
+          </div>
+        </div>
+
+        <div id="checkout-right" style="flex:1; min-width:320px; max-width:560px;">
+          <div class="order-block">
+            <form id="checkout-form">
+              <label for="name">Имя:</label>
+              <input type="text" id="name" name="name" required>
+
+              <label for="phone">Телефон:</label>
+              <input type="tel" id="phone" name="phone" required>
+
+              <label for="address">Адрес:</label>
+              <input type="text" id="address" name="address" required>
+
+              <fieldset class="delivery">
+                <label>
+                  <input type="radio" name="delivery-option" value="asap" checked>
+                  Как можно скорее
+                </label>
+                <label>
+                  <input type="radio" name="delivery-option" value="specific">
+                  К указанному времени
+                </label>
+
+                <div class="datetime-input">
+                  <label for="delivery-date">Выберите дату:</label>
+                  <input type="date" id="delivery-date" name="delivery-date">
+
+                  <label for="delivery-time">Выберите время:</label>
+                  <input type="time" id="delivery-time" name="delivery-time" min="07:00" max="23:00">
+                  <small>Доступное время доставки с 07:00 до 23:00</small>
+                </div>
+              </fieldset>
+
+              <button type="submit" id="send-order">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>Контакты: г. Москва, ул. Пушкина, дом Колотушкина</p>
+    <p>Телефон: <a href="tel:+79054658968">+7 (905) 465-89-68</a></p>
+    <p>Email: <a href="mailto:info@eatbox.ru">info@eatbox.ru</a></p>
+  </footer>
+
+  <div id="alert-overlay" class="hidden">
+    <div class="alert-box">
+      <p id="alert-message"></p>
+      <button id="alert-ok">Окей</button>
+    </div>
+  </div>
+
+  <script src="async_checkout.js"></script>
+</body>
+</html>
