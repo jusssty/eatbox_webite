@@ -64,7 +64,6 @@ function updateSummaryList(selected, allDishes) {
 
     const nameSpan = document.createElement('span');
     nameSpan.style.flex = '1';
-
     const priceSpan = document.createElement('span');
 
     if (selKey) {
@@ -120,62 +119,44 @@ async function initCheckout() {
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const combos = [
-      { soup: true, main: true, salad: true, drink: true },
-      { soup: true, main: true, drink: true },
-      { soup: true, salad: true, drink: true },
-      { main: true, salad: true, drink: true },
-      { main: true, drink: true },
-      { dessert: true }
-    ];
-
-    const has = {
-      soup: !!selected.soup,
-      main: !!selected.main,
-      salad: !!selected.salad,
-      drink: !!selected.drink,
-      dessert: !!selected.dessert
-    };
-
-    const valid = combos.some(combo =>
-      (!combo.soup || has.soup) &&
-      (!combo.main || has.main) &&
-      (!combo.salad || has.salad) &&
-      (!combo.drink || has.drink) &&
-      (!combo.dessert || has.dessert)
-    );
-
-    if (!valid) {
-      alertMessage.textContent = 'Состав заказа не соответствует доступным комбо';
-      alertOverlay.classList.remove('hidden');
-      return;
-    }
 
     const formData = new FormData(form);
+
+    function getDishId(category) {
+      const keyword = selected[category];
+      const dish = dishes.find(d => d.keyword === keyword);
+      return dish ? dish.id : null;
+    }
+
     const payload = {
+      created_at: new Date().toISOString(),
+      total_price: Object.keys(selected).reduce((sum, cat) => {
+      const dish = dishes.find(d => d.keyword === selected[cat]);
+      return sum + (dish?.price || 0);
+    }, 0),
       name: formData.get('name'),
       phone: formData.get('phone'),
       address: formData.get('address'),
+      comment: formData.get('comment'),
       deliveryOption: formData.get('delivery-option'),
       deliveryDate: formData.get('delivery-date'),
       deliveryTime: formData.get('delivery-time'),
-      items: Object.values(selected).filter(Boolean),
+      soupId: getDishId('soup'),
+      mainId: getDishId('main'),
+      saladId: getDishId('salad'),
+      drinkId: getDishId('drink'),
+      dessertId: getDishId('dessert')
     };
 
-    let total = 0;
-    payload.items.forEach(k => {
-      const d = dishes.find(x => x.keyword === k);
-      if (d) total += Number(d.price || 0);
-    });
-    payload.total = total;
-
     try {
-    	const resp = await fetch('https://httpbin.org/post', {
-        	method: 'POST',
-	        headers: { 'Content-Type': 'application/json' },
-	        body: JSON.stringify(payload)
-      })
-      if (!resp.ok) throw new Error('server '+resp.status);
+      const resp = await fetch('https://691f340fbb52a1db22c0e77c.mockapi.io/api/eatbox/orders', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      if (!resp.ok) throw new Error('server ' + resp.status);
+
       localStorage.removeItem(ORDER_KEY);
       alertMessage.textContent = 'Заказ успешно отправлен!';
       alertOverlay.classList.remove('hidden');
@@ -183,7 +164,6 @@ async function initCheckout() {
       grid.innerHTML = '';
       renderEmptyMessage(true);
       updateSummaryList({}, dishes);
-
     } catch (err) {
       console.error('Ошибка отправки заказа', err);
       alertMessage.textContent = 'Ошибка отправки заказа. Попробуйте ещё раз.';
@@ -210,4 +190,3 @@ function removeFromOrder(dish) {
 }
 
 window.addEventListener('DOMContentLoaded', initCheckout);
-

@@ -148,8 +148,12 @@ nav a.active {
   background: #111;
   color: #fff;
   font-size: 1rem;
-  outline: none;
+  outline: auto;
   transition: 0.3s;
+}
+
+#delivery-date, #delivery-time {
+  outline: none;
 }
 
 .order-block input:focus {

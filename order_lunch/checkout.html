@@ -16,7 +16,6 @@
     <section id="basket" class="menu-section">
       <h2>Состав заказа</h2>
       <div class="menu-grid" id="basket-grid">
-        <!-- сюда подгружаются карточки выбранных блюд -->
       </div>
       <p id="empty-message" style="grid-column:1/-1; color:#ccc; display:none;">
         Ничего не выбрано. Чтобы добавить блюда в заказ, перейдите на страницу
@@ -47,6 +46,9 @@
 
               <label for="address">Адрес:</label>
               <input type="text" id="address" name="address" required>
+              
+              <label for="comment">Комментарий к заказу:</label>
+              <textarea id="comment" name="comment" rows="4" placeholder="Например, без лука, без соли и т.д."></textarea>
 
               <fieldset class="delivery">
                 <label>
