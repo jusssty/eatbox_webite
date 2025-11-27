@@ -1,0 +1,108 @@
+body {
+    background: linear-gradient(135deg, #000000, #0a0014, #050009);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+.neon-red {
+    color: #ff2a8a;
+    text-shadow: 0 0 7px #ff2a8a, 0 0 15px #ff0055, 0 0 35px #ff0077;
+}
+
+.neon-purple {
+    color: #b43aff;
+    text-shadow: 0 0 7px #b43aff, 0 0 15px #8f00ff, 0 0 35px #c300ff;
+}
+
+@keyframes neonPulse {
+    0%, 100% {
+        text-shadow: 0 0 7px #ff2a8a, 0 0 25px #d1006b;
+    }
+    50% {
+        text-shadow: 0 0 18px #ff2ad5, 0 0 45px #ff00bb;
+    }
+}
+
+.hero {
+    padding: 140px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.3rem;
+    font-weight: 700;
+    animation: neonPulse 2.5s infinite ease-in-out;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.hero img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #ff2a8a88, 0 0 45px #b43aff66;
+    animation: floatImg 4s ease-in-out infinite;
+}
+
+@keyframes floatImg {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.neon-card {
+    background: rgba(10, 0, 20, 0.55);
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #ff2a8a;
+    box-shadow: 0 0 10px #ff2a8a55, 0 0 35px #b43aff33;
+    backdrop-filter: blur(5px);
+    transition: 0.3s ease;
+}
+
+.neon-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px #ff2a8a99, 0 0 55px #b43aff99;
+}
+
+.btn-neon {
+    background: linear-gradient(90deg, #ff2a8a, #b43aff);
+    border: none;
+    padding: 14px 35px;
+    font-weight: 600;
+    border-radius: 50px;
+    color: #fff;
+    text-shadow: 0 0 8px #000;
+    box-shadow: 0 0 15px #ff2a8a, 0 0 35px #b43aff;
+    transition: .3s;
+}
+
+.btn-neon:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 25px #ff2ad5, 0 0 55px #c300ff;
+}
+
+.form-control {
+    background: rgba(20, 0, 35, 0.6);
+    border: 1px solid #b43aff;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 8px #b43aff55;
+}
+
+.form-control:focus {
+    background: rgba(20, 0, 35, 0.9);
+    border-color: #ff2ad5;
+    box-shadow: 0 0 15px #ff2ad5, 0 0 25px #b43aff;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 80px;
+    color: #bbb;
+    border-top: 1px solid #b43aff88;
+}
