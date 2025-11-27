@@ -16,6 +16,7 @@ h1, h2{
 
 a {
   color: #ff3c3c;
+  font-size: 14px;
   text-decoration: none;
   transition: 0.3s;
 }
